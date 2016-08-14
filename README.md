@@ -1,8 +1,5 @@
-# ampx
+# ampx Beta 1
 Accelerated Mobile Pages (AMP) for  MODX Evo
-
-Beta 1 (starting concept)
-
 
 NOTE: it's a very beta release and there are a lot of AMP features to add (I have not read all the amp documentation ) and MODX issues to fix
 It is not an elegant solution (there is no friendly url), but it seems to work for blogpost/content pages: 
