@@ -9,7 +9,7 @@
 <!doctype html>
 <html amp lang="en">
   <head>
-    <meta charset="[(modx_charset)]">
+    <meta charset="utf-8">
     <title> [+amplontitle+]</title>
     <link rel="canonical" href="[+canonicalurl+]" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
