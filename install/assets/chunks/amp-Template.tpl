@@ -1,7 +1,7 @@
 /**
  * amp-Template
  *
- * 
+ * AMP (Accelerated Mobile Pages) Template for AMPx
  *
  * @category	chunk
  * @internal @modx_category ampx
@@ -10,14 +10,14 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
-    <title> [+amplontitle+]</title>
+    <title>[+amplongtitle+]</title>
     <link rel="canonical" href="[+canonicalurl+]" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Open-source framework for publishing content",
+        "headline": "[+amplongtitle+]",
         "datePublished": "[+datePublished+]",
         "image": [
           "[+ampimage+]"
@@ -28,7 +28,7 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-	  <h1>[+amplontitle+]</h1>
+	  <h1>[+amplongtitle+]</h1>
 <amp-img src=[+ampimage+] width=300 height=300></amp-img>
  [+ampcontent+]
   </body>
