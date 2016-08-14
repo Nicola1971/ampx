@@ -28,5 +28,7 @@ IMPORTANT: Replace 57 with the ID of resource created at Step 1
 Issue:
 
 1) this beta support only pagetitle, content, longtitle, description, introtext, pubdate and a custom image tv (with snippet parameter &imageTv=`tvname`)
+
 2) issue: validation error with any active plugins that loads something (like js to the page code) with OnWebPagePrerender 
+
 3) issue with snippets inside content
