@@ -9,16 +9,16 @@ It is not an elegant solution (there is no friendly url), but it seems to work f
 
 https://github.com/Nicola1971/ampx
 
-Installation with Packagemanager 
+# Installation with Packagemanager 
 
-Step 1) Create a new resource: 
+### Step 1) Create a new resource: 
 
-template amp-blank
-richtext: no
-content: [!ampx!]
-pagetitle: amp
+* template amp-blank
+* richtext: no
+* content: [!ampx!]
+* pagetitle: amp
 
-Step 2) Add to the HEAD tag of your default Post Template the link to your AMP version
+### Step 2) Add to the HEAD tag of your default Post Template the link to your AMP version
 
 ```<link rel="amphtml" href="[(site_url)][~57~]&id=[*id*]" />```
 
