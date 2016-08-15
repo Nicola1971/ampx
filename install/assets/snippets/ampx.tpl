@@ -20,7 +20,7 @@ $imageTv = isset($imageTv) ? $imageTv : 'Thumbnail';
 DEFINE('AMP__DIR__', 'assets/snippets/ampx/');
 require_once( AMP__DIR__ . 'includes/class-amp-post-template.php' );
 
-$content['content']='<h1> ampx Error</h1><p>No document was given to generate AMP html page.<br/> Missing value for ampid parameter</p>';
+$cleancontent ='<h1> ampx Error</h1><p>No document was given to generate AMP html page.<br/> Missing value for ampid parameter</p>';
 if (isset($_GET['ampid'])){
 	
 //get resource id
