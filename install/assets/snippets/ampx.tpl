@@ -51,7 +51,6 @@ $imagetvar = $getimage[$imageTv];
 
 //get author
 $createdby = $modx->getPageInfo($id,1,'createdby'); 
-// sample conversion
 $user_info = $modx->getUserInfo($createdby['createdby']);
 $author = $user_info['username'];
 }
