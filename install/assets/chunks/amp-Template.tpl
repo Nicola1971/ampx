@@ -42,7 +42,7 @@
 </nav>
 <div class="ampx-content">
 	<amp-img src="[+ampimage+]" width="2264" height="1000" layout="responsive"></amp-img>
-	<h1 class="ampx-title">[+amplongtitle+]</h1>
+	<h1 class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
 	<div class="ampx-meta">
 	 by [+author+] | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments` &css=`0`]]) |  [+datePublished+]
     </div>
@@ -50,8 +50,9 @@
 </div>
 <div class="ampx-footer">
 <p> <a href="http://www.tattoocms.it/" title="AMPx Accelerated Mobile Pages for MODX Evolution">Powered
-          by AMPx <br/>Accelerated Mobile Pages for MODX Evolution</a><br />
-</p>	
+          by AMPx</a> <br/>Accelerated Mobile Pages for MODX Evolution<br />
+	<a href="[+canonicalurl+]">[switch to default view]</a>
+</p>
 </div>
 </body>
 </html>

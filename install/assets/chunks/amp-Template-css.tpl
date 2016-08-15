@@ -10,6 +10,7 @@
 .alignright { float: right; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.clear { clear: both; }
 
 
 /* Template Styles */
@@ -73,15 +74,10 @@ a:focus {
 	padding: 20px 16px;
 text-align:center
 }
-.ampx-footer a {
-	color: #3d596d;
-	text-decoration: none;
-}
+.ampx-footer a {color: #499bea;	text-decoration: none;}
+.ampx-footer a:hover{color: #3d596d;text-decoration: none;}
 
-nav.ampx-title-bar {
-	background: #499bea;
-	padding: 0 16px;
-}
+nav.ampx-title-bar {background: #499bea;padding: 0 16px;}
 
 nav.ampx-title-bar div {
 background: #499bea;
