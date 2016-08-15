@@ -44,7 +44,7 @@
 	<amp-img src="[+ampimage+]" width="2264" height="1000" layout="responsive"></amp-img>
 	<h1 class="ampx-title">[+amplongtitle+]</h1>
 	<div class="ampx-meta">
-	 by [+author+] | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments`]]) |  [+datePublished+]
+	 by [+author+] | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments` &css=`0`]]) |  [+datePublished+]
     </div>
 	[+ampcontent+]
 </div>
