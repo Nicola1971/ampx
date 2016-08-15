@@ -29,3 +29,15 @@ Issue:
 2) issue: validation error with any active plugins that loads something (like js to the page code) with OnWebPagePrerender 
 
 3) issue with snippets inside content
+
+#Updates:
+# Beta 1.0.1: 
+
+* added snippet folder
+* image sanitize
+* new template
+* added author placeholder
+
+# Beta 1: 
+
+* first commit
