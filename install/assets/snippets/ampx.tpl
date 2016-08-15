@@ -20,7 +20,7 @@ $imageTv = isset($imageTv) ? $imageTv : 'Thumbnail';
 DEFINE('AMP__DIR__', 'assets/snippets/ampx/');
 require_once( AMP__DIR__ . 'includes/class-amp-post-template.php' );
 
-$content['content']='<p>no document was given to generate AMP html page, missing ampid parameter</p>';
+$content['content']='<h1> ampx Error</h1><p>No document was given to generate AMP html page.<br/> Missing value for ampid parameter</p>';
 if (isset($_GET['ampid'])){
 	
 //get resource id
@@ -36,7 +36,7 @@ $introtext = $modx->getPageInfo($id,1,'introtext');
 $sourcecontent = $modx->getPageInfo($id,1,'content'); 
 $ampContent = new AMP_Content($sourcecontent['content'], array(), array('AMP_Img_Sanitizer' => array()), array());
 $content = $ampContent->get_amp_content();
-$cleancontent = strip_tags($content, '<p><a><h1><h2><h3><h4><h5><b><amp-img>');
+$cleancontent = strip_tags($content, '<p><a><h1><h2><h3><h4><h5><b><strong><ol><ul><li><code><pre><amp-img>');
 
 //get datePublished from publishedon
 $publishedon = $modx->getPageInfo($id,1,'publishedon'); 
