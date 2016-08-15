@@ -36,6 +36,7 @@ $introtext = $modx->getPageInfo($id,1,'introtext');
 $sourcecontent = $modx->getPageInfo($id,1,'content'); 
 $ampContent = new AMP_Content($sourcecontent['content'], array(), array('AMP_Img_Sanitizer' => array()), array());
 $content = $ampContent->get_amp_content();
+$cleancontent = strip_tags($content, '<p><a><h1><h2><h3><h4><h5><b><amp-img>');
 
 //get datePublished from publishedon
 $publishedon = $modx->getPageInfo($id,1,'publishedon'); 
@@ -56,7 +57,7 @@ $author = $user_info['username'];
 }
 
 //parse chunk placeholders
-$values = array('canonicalurl' => $canonicalurl, 'ampcontent' => $content, 'amplongtitle' => $longtitle['longtitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
+$values = array('canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
 $output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
 
 return $output;
