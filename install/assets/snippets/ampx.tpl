@@ -10,54 +10,52 @@
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  */
 
-/* add inside the head tag of your template (where 57 is the resource containing ampx snippet call)
-	<link rel="amphtml" href="[(site_url)][~57~]&ampid=[*id*]" />
-*/	
-	
-$tpl = (isset($tpl)) ? $tpl : 'amp-Template';
-$imageTv = isset($imageTv) ? $imageTv : 'Thumbnail';
+<!doctype html>
+<html amp>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>[+amplongtitle+]</title>
+    <link rel="canonical" href="[+canonicalurl+]" />
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic' rel='stylesheet' type='text/css'>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "[+amplongtitle+]",
+        "datePublished": "[+datePublished+]",
+        "image": [
+          "[+ampimage+]"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-DEFINE('AMP__DIR__', 'assets/snippets/ampx/');
-require_once( AMP__DIR__ . 'includes/class-amp-post-template.php' );
-
-$cleancontent ='<h1> ampx Error</h1><p>No document was given to generate AMP html page.<br/> Missing value for ampid parameter</p>';
-if (isset($_GET['ampid'])){
-	
-//get resource id
-$id=$modx->db->escape($_GET['ampid']);
-
-//add modx resource placeholder
-$title = $modx->getPageInfo($id,1,'pagetitle'); 
-$longtitle = $modx->getPageInfo($id,1,'longtitle'); 
-$description = $modx->getPageInfo($id,1,'description'); 
-$introtext = $modx->getPageInfo($id,1,'introtext'); 
-	
-//get content and sanitize images 	
-$sourcecontent = $modx->getPageInfo($id,1,'content'); 
-$ampContent = new AMP_Content($sourcecontent['content'], array(), array('AMP_Img_Sanitizer' => array()), array());
-$content = $ampContent->get_amp_content();
-$cleancontent = strip_tags($content, '<p><a><h1><h2><h3><h4><h5><b><strong><ol><ul><li><code><pre><amp-img>');
-
-//get datePublished from publishedon
-$publishedon = $modx->getPageInfo($id,1,'publishedon'); 
-$datePublished = date(r,$publishedon['publishedon']);
-
-//get canonical url from page
-$canonicalurl = $modx->makeUrl($id, '', '', 'full');	
-
-//get image tv
-$getimage = $modx->getTemplateVarOutput($imageTv,$id);
-$imagetvar = $getimage[$imageTv];
-
-
-//get author
-$createdby = $modx->getPageInfo($id,1,'createdby'); 
-$user_info = $modx->getUserInfo($createdby['createdby']);
-$author = $user_info['username'];
-}
-
-//parse chunk placeholders
-$values = array('canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
-$output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
-
-return $output;
+	<style amp-custom>
+ {{amp-Template-css}}
+	</style>
+</head>
+<body>
+<nav class="ampx-title-bar">
+	<div>
+		<a href="[(site_url)]"> <amp-img src="[(site_url)]assets/images/logo.png" width="32" height="32" class="ampx-site-icon"></amp-img>
+			[(site_name)]
+		</a>
+	</div>
+</nav>
+<div class="ampx-content">
+	<amp-img src="[+ampimage+]" width="2264" height="1000" layout="responsive"></amp-img>
+	<h1 class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
+	<div class="ampx-meta">
+	 by [+author+] | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments` &css=`0`]]) |  [+datePublished+]
+    </div>
+	[+ampcontent+]
+</div>
+<div class="ampx-footer">
+<p> <a href="http://www.tattoocms.it/" title="AMPx Accelerated Mobile Pages for MODX Evolution">Powered
+          by AMPx <br/>Accelerated Mobile Pages for MODX Evolution</a><br />
+</p>	
+</div>
+</body>
+</html>

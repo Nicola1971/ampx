@@ -42,9 +42,12 @@ body {
 	font-weight: 700;
 	color: #2e4453;
 }
+.ampx-title a{
+text-decoration:none;
+}
 
 .ampx-meta {
-	margin-bottom: 16px;
+	margin: 10px 0 16px 0;
 }
 
 p,
