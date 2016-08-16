@@ -13,7 +13,7 @@ Accelerated Mobile Pages (AMP) for  MODX Evolution
 * content: [!ampx!]
 * pagetitle: amp
 
-### Step 3) Add to the HEAD tag of your default Post Template a link the AMP version
+### Step 3) Add to the HEAD tag of your Template a link the AMP version
 
 ```<link rel="amphtml" href="[(site_url)][~57~]?id=[*id*]" />```
 
