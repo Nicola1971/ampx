@@ -26,13 +26,14 @@ if (isset($_GET['ampid'])){
 //get resource id
 $id=$modx->db->escape($_GET['ampid']);
 
-//add modx resource placeholder
+//get modx resource placeholder 
 $title = $modx->getPageInfo($id,1,'pagetitle'); 
 $longtitle = $modx->getPageInfo($id,1,'longtitle'); 
+$menutitle = $modx->getPageInfo($id,1,'menutitle');
 $description = $modx->getPageInfo($id,1,'description'); 
 $introtext = $modx->getPageInfo($id,1,'introtext'); 
 	
-//get content and sanitize images 	
+//get content, sanitize images and strip html tags
 $sourcecontent = $modx->getPageInfo($id,1,'content'); 
 $ampContent = new AMP_Content($sourcecontent['content'], array(), array('AMP_Img_Sanitizer' => array()), array());
 $content = $ampContent->get_amp_content();
@@ -57,7 +58,7 @@ $author = $user_info['username'];
 }
 
 //parse chunk placeholders
-$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
+$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
 $output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
 
 return $output;
