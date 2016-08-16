@@ -1,5 +1,5 @@
 /**
- * amp-Template
+ * amp-Template-Container
  *
  * AMP (Accelerated Mobile Pages) Template for AMPx
  *
@@ -7,7 +7,7 @@
  * @internal @modx_category ampx
  */
 <!doctype html>
-<html AMP lang="en" itemscope itemtype="http://schema.org/NewsArticle">
+<html AMP lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
@@ -17,7 +17,7 @@
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
-        "@type": "NewsArticle",
+        "@type": "WebPage",
         "headline": "[+amplongtitle+]",
         "datePublished": "[+datePublished+]",
         "image": [
@@ -41,17 +41,9 @@
 	</div>
 </nav>
 <div class="ampx-content">
-	<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-	<amp-img src="[+ampimage+]" width="2000" height="800" layout="responsive"></amp-img>
-	<meta itemprop="url" content="[+ampimage+]"></meta>
-    <meta itemprop="width" content="2000"></meta>
-    <meta itemprop="height" content="800"></meta>
-    </div>
 	<h1 itemprop="headline" class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
-	<div class="ampx-meta">
-		by <span itemprop="author" itemscope itemtype="https://schema.org/Person"> <span itemprop="name">[+author+]</span></span> | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments` &css=`0`]]) | <time itemprop="datePublished" datetime="1907-05-05T12:02:41Z"> [+datePublished+]</time>
-    </div>
-	[+ampcontent+]
+	<h3>[+ampdescription+]</h3>
+[[Ditto?  &parents=`[+ampid+]` &display=`all` &hideFolders=`1` &showInMenuOnly=`1` &depth=`2` &sortBy=`editedon` &sortDir=`DESC` &removeChunk=`Comments` &tpl=`amp-ditto-blog` &paginate=`0` &extenders=`summary,dateFilter` &paginateAlwaysShowLinks=`0`]]
 </div>
 <div class="ampx-footer">
 <p> <a href="http://www.tattoocms.it/" title="AMPx Accelerated Mobile Pages for MODX Evolution">Powered

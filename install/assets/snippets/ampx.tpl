@@ -3,7 +3,7 @@
  *
  * Accelerated Mobile Pages for Evo
  *
-* @version  Beta 1.0.1
+* @version  Beta 1.0.2
  * @author  Nicola Lambathakis http://www.tattoocms.it/
  * @category	snippet
  * @internal	@modx_category ampx
@@ -11,10 +11,12 @@
  */
 
 <?php
-/* add inside the head tag of your template (where 57 is the resource containing ampx snippet call)
-<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]" />
+/* add to the head tag of your template (where 57 is the resource containing ampx snippet call)
+ * <link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]" />
+ *  you can pass tpl parameter via URL:
+ *  <link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]&tpl=amp-Template-Home" />
 */	
-$tpl = (isset($tpl)) ? $tpl : 'amp-Template';
+$tpl = isset($_GET['tpl']) ? $_GET['tpl'] : 'amp-Template';
 $imageTv = isset($imageTv) ? $imageTv : 'Thumbnail';
 
 DEFINE('AMP__DIR__', 'assets/snippets/ampx/');
@@ -55,6 +57,7 @@ $imagetvar = $getimage[$imageTv];
 $createdby = $modx->getPageInfo($id,1,'createdby'); 
 $user_info = $modx->getUserInfo($createdby['createdby']);
 $author = $user_info['username'];
+
 }
 
 //parse chunk placeholders

@@ -50,7 +50,20 @@ text-decoration:none;
 .ampx-meta {
 	margin: 10px 0 16px 0;
 }
-
+.ampx-img-blog {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.ampx-item-blog {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  clear:both;
+margin-bottom: 20px;
+}
 p,
 ol,
 ul,
