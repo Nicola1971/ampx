@@ -17,7 +17,7 @@ https://github.com/Nicola1971/ampx
 
 ### Step 2) Add to the HEAD tag of your default Post Template the link to your AMP version
 
-```<link rel="amphtml" href="[(site_url)][~57~]&id=[*id*]" />```
+```<link rel="amphtml" href="[(site_url)][~57~]?id=[*id*]" />```
 
 IMPORTANT: Replace 57 with the ID of resource created at Step 1
 
