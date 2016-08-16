@@ -12,9 +12,8 @@
 
 <?php
 /* add inside the head tag of your template (where 57 is the resource containing ampx snippet call)
-	<link rel="amphtml" href="[(site_url)][~57~]&ampid=[*id*]" />
+<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]" />
 */	
-	
 $tpl = (isset($tpl)) ? $tpl : 'amp-Template';
 $imageTv = isset($imageTv) ? $imageTv : 'Thumbnail';
 
@@ -58,7 +57,7 @@ $author = $user_info['username'];
 }
 
 //parse chunk placeholders
-$values = array('canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
+$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
 $output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
 
 return $output;
