@@ -15,7 +15,7 @@ https://github.com/Nicola1971/ampx
 * content: [!ampx!]
 * pagetitle: amp
 
-### Step 2) Add to the HEAD tag of your default Post Template the link to your AMP version
+### Step 2) Add to the HEAD tag of your default Post Template a link the AMP version
 
 ```<link rel="amphtml" href="[(site_url)][~57~]?id=[*id*]" />```
 
