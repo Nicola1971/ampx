@@ -27,7 +27,7 @@ Accelerated Mobile Pages (AMP) for  MODX Evolution
  ```<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*][[if? &is=`[*isfolder*]:is:1` &then=`&tpl=amp-Template-Container`]]" />```
 
 
-IMPORTANT: Replace 57 with the ID of resource created at Step 1
+IMPORTANT: Replace 57 with the ID of resource created at Step 2
 
 
 Issue:
