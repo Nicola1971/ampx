@@ -31,6 +31,14 @@ Issue:
 3) issue with snippets inside content
 
 #Updates:
+
+# Beta 1.0.2: 
+
+* now, you can pass tpl parameter to url
+* new templates for Home and Containers
+* ditto tpl
+* more placeholders
+
 # Beta 1.0.1: 
 
 * added snippet folder
