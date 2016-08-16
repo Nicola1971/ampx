@@ -6,13 +6,8 @@
  * @category	chunk
  * @internal @modx_category ampx
  */
-<!doctype html>
-<html amp>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 	<title>[+amplongtitle+]</title>
-    <link rel="canonical" href="[+canonicalurl+]" />
+    <link itemprop="mainEntityOfPage" rel="canonical" href="[+canonicalurl+]" />
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic' rel='stylesheet' type='text/css'>
     <script type="application/ld+json">
       {
@@ -41,10 +36,15 @@
 	</div>
 </nav>
 <div class="ampx-content">
-	<amp-img src="[+ampimage+]" width="2264" height="1000" layout="responsive"></amp-img>
-	<h1 class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
+	<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+	<amp-img src="[+ampimage+]" width="2000" height="800" layout="responsive"></amp-img>
+	<meta itemprop="url" content="[+ampimage+]"></meta>
+    <meta itemprop="width" content="2000"></meta>
+    <meta itemprop="height" content="800"></meta>
+    </div>
+	<h1 itemprop="headline" class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
 	<div class="ampx-meta">
-	 by [+author+] | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments` &css=`0`]]) |  [+datePublished+]
+		by <span itemprop="author" itemscope itemtype="https://schema.org/Person"> <span itemprop="name">[+author+]</span></span> | Comments ([[Jot?&docid=`[*id*]`&action=`count-comments` &css=`0`]]) | <time itemprop="datePublished" datetime="1907-05-05T12:02:41Z"> [+datePublished+]</time>
     </div>
 	[+ampcontent+]
 </div>
