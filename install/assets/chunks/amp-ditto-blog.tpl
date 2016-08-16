@@ -7,6 +7,7 @@
  * @internal @modx_category ampx
  */
 <div class="ampx-item-blog">
+	<a href="[(site_url)][~[*id*]~]?ampid=[+id+]" title="[+title+]">
 <figure>
     <amp-img src="[[phpthumb? &input=`[+Thumbnail+]` &options=`w=1400,h=672,zc=TL`]]"
      class="img-blog"    
@@ -14,8 +15,8 @@
       height=768
       layout=responsive></amp-img>
    <figcaption>[+pagetitle+]</figcaption>
- </figure>
-                            <a href="[(site_url)][~[*id*]~]?ampid=[+id+]" title="[+title+]"><h3>[+title+]</h3></a>
+ </figure></a> 
+ <a href="[(site_url)][~[*id*]~]?ampid=[+id+]" title="[+title+]"><h2>[+title+]</h2></a>      
 			
                             <div class="entry-meta"> 
 								<span><i class="icon-color-blue icon-no-border fa fa-github"></i> Version: [+Version+] </span>
