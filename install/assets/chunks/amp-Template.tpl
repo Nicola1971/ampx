@@ -27,7 +27,6 @@
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-
 	<style amp-custom>
  {{amp-Template-css}}
 	</style>
@@ -35,9 +34,7 @@
 <body>
 <nav class="ampx-title-bar">
 	<div>
-		<a href="[(site_url)]"> <amp-img src="[(site_url)]assets/images/logo.png" width="32" height="32" class="ampx-site-icon"></amp-img>
-			[(site_name)]
-		</a>
+{{amp-Titlebar}}
 	</div>
 </nav>
 <div class="ampx-content">
@@ -54,10 +51,7 @@
 	[+ampcontent+]
 </div>
 <div class="ampx-footer">
-<p> <a href="http://www.tattoocms.it/" title="AMPx Accelerated Mobile Pages for MODX Evolution">Powered
-          by AMPx</a> <br/>Accelerated Mobile Pages for MODX Evolution<br />
-	<a href="[+canonicalurl+]">[switch to default view]</a> 
-</p>
+{{amp-Footer}}
 </div>
 </body>
 </html>
