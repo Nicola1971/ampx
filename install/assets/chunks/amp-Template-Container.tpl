@@ -35,9 +35,7 @@
 <body>
 <nav class="ampx-title-bar">
 	<div>
-		<a href="[(site_url)]"> <amp-img src="[(site_url)]assets/images/logo.png" width="32" height="32" class="ampx-site-icon"></amp-img>
-			[(site_name)]
-		</a>
+{{amp-Titlebar}}
 	</div>
 </nav>
 <div class="ampx-content">
@@ -46,10 +44,7 @@
 [[Ditto?  &parents=`[+ampid+]` &display=`all` &hideFolders=`1` &showInMenuOnly=`1` &depth=`2` &sortBy=`editedon` &sortDir=`DESC` &removeChunk=`Comments` &tpl=`amp-ditto-blog` &paginate=`0` &extenders=`summary,dateFilter` &paginateAlwaysShowLinks=`0`]]
 </div>
 <div class="ampx-footer">
-<p> <a href="http://www.tattoocms.it/" title="AMPx Accelerated Mobile Pages for MODX Evolution">Powered
-          by AMPx</a> <br/>Accelerated Mobile Pages for MODX Evolution<br />
-	<a href="[+canonicalurl+]">[switch to default view]</a> 
-</p>
+{{amp-Footer}}
 </div>
 </body>
 </html>
