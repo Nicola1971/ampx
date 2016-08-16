@@ -6,6 +6,11 @@
  * @category	chunk
  * @internal @modx_category ampx
  */
+<!doctype html>
+<html AMP lang="en" itemscope itemtype="http://schema.org/NewsArticle">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 	<title>[+amplongtitle+]</title>
     <link itemprop="mainEntityOfPage" rel="canonical" href="[+canonicalurl+]" />
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic' rel='stylesheet' type='text/css'>
