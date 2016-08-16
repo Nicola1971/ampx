@@ -4,7 +4,7 @@ Accelerated Mobile Pages (AMP) for  MODX Evolution
 
 # Installation 
 
-### Step 1) instala with Packagemanager 
+### Step 1) install with Packagemanager 
 
 ### Step 2) Create a new resource: 
 
