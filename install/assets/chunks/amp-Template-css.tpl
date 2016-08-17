@@ -105,10 +105,11 @@ nav.ampx-title-bar a {
 
 nav.ampx-title-bar .ampx-site-icon {
 	/** site icon is 32px **/
-	float: left;
+ 	float: left;
 	margin: 12px 8px 0 0;
 	border-radius: 50%;
 }
+
 .ampx-meta {
 	background: #e9eff3;
 	padding: 5px;
@@ -117,6 +118,12 @@ nav.ampx-title-bar .ampx-site-icon {
 .ampx-meta a {
 	color: #4f748e;
 }
+
+.togglesidebar
+{background: transparent;padding-top:8px; max-height:36px;}
+.togglesidebar amp-img {cursor: pointer;}
+
+.amp-close-image {background: #499bea;padding-top:4px;cursor: pointer;}
 
 /* Quotes */
 blockquote {
@@ -129,6 +136,7 @@ blockquote {
 
 blockquote p:last-child {
 	margin-bottom: 0;
+
 }
 
 /* Other Elements */
