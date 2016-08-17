@@ -51,7 +51,12 @@ $canonicalurl = $modx->makeUrl($id, '', '', 'full');
 //get image tv
 $getimage = $modx->getTemplateVarOutput($imageTv,$id);
 $imagetvar = $getimage[$imageTv];
-
+if (empty($imagetvar)) {
+   $mainimage = 'assets/snippets/ampx/images/noimage.png'; //default image if tv is empty
+}
+	else {
+$mainimage = $imagetvar;
+	}
 
 //get author
 $createdby = $modx->getPageInfo($id,1,'createdby'); 
@@ -61,7 +66,7 @@ $author = $user_info['username'];
 }
 
 //parse chunk placeholders
-$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $imagetvar, 'datePublished' => $datePublished, 'author' => $author);
+$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $mainimage, 'datePublished' => $datePublished, 'author' => $author);
 $output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
 
 return $output;
