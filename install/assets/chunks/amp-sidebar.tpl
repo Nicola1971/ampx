@@ -1,7 +1,7 @@
 /**
  * amp-sidebar
  *
- * 
+ * Sidebar nav
  *
  * @category	chunk
  * @internal @modx_category ampx
