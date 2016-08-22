@@ -1,9 +1,9 @@
 /**
  * ampx
  *
- * Accelerated Mobile Pages for Evo
+ * Accelerated Mobile Pages for Evo - Beta 1.0.4
  *
-* @version  Beta 1.0.3
+* @version  Beta 1.0.4
  * @author  Nicola Lambathakis http://www.tattoocms.it/
  * @category	snippet
  * @internal	@modx_category ampx
