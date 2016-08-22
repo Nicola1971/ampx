@@ -3,7 +3,7 @@
  *
  * Accelerated Mobile Pages for Evo
  *
-* @version  Beta 1.0.2
+* @version  Beta 1.0.3
  * @author  Nicola Lambathakis http://www.tattoocms.it/
  * @category	snippet
  * @internal	@modx_category ampx
@@ -42,8 +42,12 @@ $content = $ampContent->get_amp_content();
 $cleancontent = strip_tags($content, '<p><a><h1><h2><h3><h4><h5><b><strong><ol><ul><li><code><pre><amp-img>');
 
 //get datePublished from publishedon
+//setlocale ( LC_ALL , "it_IT" ); 
 $publishedon = $modx->getPageInfo($id,1,'publishedon'); 
 $datePublished = date(r,$publishedon['publishedon']);
+//get dateModified from editedon
+$editedon = $modx->getPageInfo($id,1,'editedon'); 
+$dateModified = date(r,$editedon['editedon']);
 
 //get canonical url from page
 $canonicalurl = $modx->makeUrl($id, '', '', 'full');	
@@ -61,12 +65,12 @@ $mainimage = $imagetvar;
 //get author
 $createdby = $modx->getPageInfo($id,1,'createdby'); 
 $user_info = $modx->getUserInfo($createdby['createdby']);
-$author = $user_info['username'];
+$author = $user_info['fullname'];
 
 }
 
 //parse chunk placeholders
-$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $mainimage, 'datePublished' => $datePublished, 'author' => $author);
+$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $mainimage, 'datePublished' => $datePublished, 'dateModified' => $dateModified, 'author' => $author);
 $output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
 
 return $output;
