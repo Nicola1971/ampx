@@ -37,6 +37,14 @@ Issue:
 
 #Updates:
 
+# Beta 1.0.4: 
+
+* changed author: fullname instead username
+* added dateModified from editedon
+* Better structured data
+* amp-Template validation for amp and structured data
+* Social Share chunk https://github.com/Nicola1971/ampx/issues/3
+
 # Beta 1.0.3: 
 
 * Sidebar navigation based on wayfinder
