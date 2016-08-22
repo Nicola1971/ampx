@@ -7,7 +7,7 @@
  * @internal @modx_category ampx
  */
 <!doctype html>
-<html AMP lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html AMP lang="en" itemscope itemtype="http://schema.org/NewsArticle" itemid="[+canonicalurl+]"/>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
@@ -15,15 +15,38 @@
     <link itemprop="mainEntityOfPage" rel="canonical" href="[+canonicalurl+]" />
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic' rel='stylesheet' type='text/css'>
     <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "headline": "[+amplongtitle+]",
-        "datePublished": "[+datePublished+]",
-        "image": [
-          "[+ampimage+]"
-        ]
-      }
+{
+"@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "[+canonicalurl+]"
+  },
+  "headline": "[+amplongtitle+]",
+  "image": {
+    "@type": "ImageObject",
+    "url": "[(site_url)][+ampimage+]",
+    "height": 2000,
+    "width": 800
+  },
+  "datePublished": "[+datePublished+]",
+  "dateModified": "[+dateModified+]",
+  "author": {
+    "@type": "Person",
+    "name": "[+author+]"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "[(site_name)]",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "[(site_url)]assets/images/logo-tattoo-amp.png",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "description": "[+ampdescription+]"
+}
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -34,8 +57,12 @@
 </head>
 <body>
 <nav class="ampx-title-bar">
-	<div>
+<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 {{amp-Titlebar}}
+<meta itemprop="name" content="[(site_name)]">
+<div class="alignright togglesidebar">
+	<amp-img class='toggle' src="assets/snippets/ampx/images/toggle.png" width="32" height="32" alt="toggle" on="tap:sidebar.toggle" role="button" tabindex="0"></amp-img>	
+</div>	
 	</div>
 </nav>
 <div class="ampx-content">
