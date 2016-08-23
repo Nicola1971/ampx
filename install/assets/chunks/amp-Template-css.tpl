@@ -160,3 +160,21 @@ amp-carousel > amp-img > img {
 	background-size: 48px 48px;
 	min-height: 48px;
 }
+/* pagination */
+a.amp_page {
+    border: 1px solid #008CBA;
+    padding: 1px 7px 2px; 
+    margin-right: 1px;
+    color: #008CBA;
+} 
+.amp_currentpage {
+    border: 1px solid #ccc;
+    padding: 1px 8px 2px; 
+    margin-right: 1px;
+    color: #ccc;
+}
+a.amp_page:hover {
+    border: 1px solid #008CBA;
+    background-color: #008CBA;
+    color: #fff;
+}
