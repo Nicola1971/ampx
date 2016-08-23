@@ -77,7 +77,7 @@
 	<h1 itemprop="headline" class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
 <div class="ampx-meta">
 		by <span itemprop="author" itemscope itemtype="https://schema.org/Person"> <span itemprop="name">[+author+]</span></span>  <time itemprop="datePublished"> [+datePublished+]</time>
-	  <meta itemprop="dateModified" content="[+dateModified+]"/> | [!amptv? &tv=`Version`!] | [[if? &is=`[!amptv? &tv=`downloadlink`!]:!empty` &then=`<a href="[[amptv? &tv=`downloadlink`]]" target="_blank" alt="download">Download</a>`]]
+	  <meta itemprop="dateModified" content="[+dateModified+]"/> | [!amptv? &tv=`Version`!] | [[if? &is=`[!amptv? &tv=`downloadlink`!]:!empty` &then=`<a href="[[amptv? &tv=`downloadlink`]]" target="_blank">Download</a>`]]
     </div>
 {{amp-social-share}}
 	[+ampcontent+]
