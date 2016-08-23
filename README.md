@@ -37,6 +37,11 @@ Issue:
 
 #Updates:
 
+# Beta 1.0.5: 
+
+* added amptv snippet: https://github.com/Nicola1971/ampx/issues/5
+* added ampPagination snippet https://github.com/Nicola1971/ampx/issues/4
+
 # Beta 1.0.4: 
 
 * changed author: fullname instead username
