@@ -68,7 +68,9 @@
 <div class="ampx-content">
 	<h1 itemprop="headline" class="ampx-title"><a href="[+canonicalurl+]">[+amplongtitle+]</a></h1>
 	<h3>[+ampdescription+]</h3>
-[[Ditto?  &parents=`[+ampid+]` &display=`all` &hideFolders=`1` &showInMenuOnly=`1` &depth=`2` &sortBy=`editedon` &sortDir=`DESC` &removeChunk=`Comments` &tpl=`amp-ditto-blog` &paginate=`0` &extenders=`summary,dateFilter` &paginateAlwaysShowLinks=`0`]]
+[[Ditto?  &parents=`[+ampid+]` &display=`5` &hideFolders=`1` &showInMenuOnly=`1` &depth=`2` &sortBy=`editedon` &sortDir=`DESC` &removeChunk=`Comments` &tpl=`amp-ditto-blog` &paginate=`1` &extenders=`summary,dateFilter` &paginateAlwaysShowLinks=`0`]]
+[[ampPagination? &pagesToShow=`10` &constantEndCount=`3` &return=`1`]]
+
 </div>
 <div class="ampx-footer">
 <p>
