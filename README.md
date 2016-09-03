@@ -16,7 +16,7 @@ http://www.tattoocms.it/extras/snippets/ampx-accelerated-mobile-pages-amp-for-mo
 
 ### Step 3) Add to the HEAD tag of your Template a link the AMP version
 
-```<link rel="amphtml" href="[(site_url)][~57~]?id=[*id*]" />```
+```<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]" />```
 
 #### you can pass tpl parameter via URL:
  ```<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]&tpl=amp-Template-Home" />```
