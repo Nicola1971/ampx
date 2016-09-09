@@ -26,7 +26,13 @@ http://www.tattoocms.it/extras/snippets/ampx-accelerated-mobile-pages-amp-for-mo
 ```<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*][[if? &is=`[*id*]:=:1` &then=`&tpl=amp-Template-Home`]]" />``` 
 
  ```<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*][[if? &is=`[*isfolder*]:is:1` &then=`&tpl=amp-Template-Container`]]" />```
+### use If snippet to add AMP only to certain resources
 
+* add AMP to children of Resource 3
+* use Amp-Template-Container for resource id 4,67,70,104,159
+* use default template for any other resource inside id 3
+
+```[[if? &is=`[*parent*]:in:3` &then=`[[if? &is=`[*id*]:in:4,67,70,104,159` &then=`<link rel="amphtml" href="[(site_url)][~438~]?ampid=[*id*]&tpl=amp-Template-Container" />` &else=`<link rel="amphtml" href="[(site_url)][~438~]?ampid=[*id*]" />`]]` &else=``]]```
 
 IMPORTANT: Replace 57 with the ID of resource created at Step 2
 
