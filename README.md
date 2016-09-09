@@ -1,4 +1,4 @@
-# ampx Beta 1
+# ampx Beta 1.0.6
 Accelerated Mobile Pages (AMP) for  MODX Evolution
 
 http://www.tattoocms.it/extras/snippets/ampx-accelerated-mobile-pages-amp-for-modx-evo.html
@@ -36,6 +36,11 @@ Issue:
 1) validation error with any active plugins that loads something (like js to the page code) with OnWebPagePrerender
 
 #Updates:
+
+# Beta 1.0.6: 
+
+* added noimage parameter
+* added striphtmlattributes from content (with simple_html_dom) to remove tinymce style attributes
 
 # Beta 1.0.5: 
 
