@@ -178,3 +178,21 @@ a.amp_page:hover {
     background-color: #008CBA;
     color: #fff;
 }
+/*button*/
+.button {
+  background: #007c49;
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #03a763;
+  text-decoration: none;
+}
+a.button {color: #FFF;}
