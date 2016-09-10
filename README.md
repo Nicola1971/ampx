@@ -1,4 +1,4 @@
-# ampx Beta 1.0.6
+# ampx Beta 1.0.7
 Accelerated Mobile Pages (AMP) for  MODX Evolution
 
 http://www.tattoocms.it/extras/snippets/ampx-accelerated-mobile-pages-amp-for-modx-evo.html
@@ -42,6 +42,10 @@ Issue:
 1) validation error with any active plugins that loads something (like js to the page code) with OnWebPagePrerender
 
 #Updates:
+
+# Beta 1.0.7
+
+* parent placeholder (get parent id from document)
 
 # Beta 1.0.6: 
 
