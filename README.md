@@ -32,7 +32,7 @@ http://www.tattoocms.it/extras/snippets/ampx-accelerated-mobile-pages-amp-for-mo
 * use Amp-Template-Container for resource id 4,67,70,104,159
 * use default template for any other resource inside id 3
 
-```[[if? &is=`[*parent*]:in:3` &then=`[[if? &is=`[*id*]:in:4,67,70,104,159` &then=`<link rel="amphtml" href="[(site_url)][~438~]?ampid=[*id*]&tpl=amp-Template-Container" />` &else=`<link rel="amphtml" href="[(site_url)][~438~]?ampid=[*id*]" />`]]` &else=``]]```
+```[[if? &is=`[*parent*]:in:3` &then=`[[if? &is=`[*id*]:in:4,67,70,104,159` &then=`<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]&tpl=amp-Template-Container" />` &else=`<link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]" />`]]` &else=``]]```
 
 IMPORTANT: Replace 57 with the ID of resource created at Step 2
 
