@@ -1,9 +1,9 @@
 /**
  * ampx
  *
- * Accelerated Mobile Pages for Evo - Beta 1.0.6
+ * Accelerated Mobile Pages for Evo - Beta 1.0.7
  *
-* @version  Beta 1.0.6
+* @version  Beta 1.0.7
  * @author  Nicola Lambathakis http://www.tattoocms.it/
  * @category	snippet
  * @internal	@modx_category ampx
@@ -28,6 +28,8 @@ if (isset($_GET['ampid'])){
 	
 //get resource id
 $id=$modx->db->escape($_GET['ampid']);
+//get parent resource
+$parentid = $modx->getParent($id,1,'id');
 
 //get modx resource placeholder 
 $title = $modx->getPageInfo($id,1,'pagetitle'); 
@@ -87,7 +89,7 @@ $author = $user_info['fullname'];
 }
 
 //parse chunk placeholders
-$values = array('ampid' => $id, 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $mainimage, 'datePublished' => $datePublished, 'dateModified' => $dateModified, 'author' => $author);
+$values = array('ampid' => $id, 'parent' => $parentid['id'], 'canonicalurl' => $canonicalurl, 'ampcontent' => $cleancontent, 'amplongtitle' => $longtitle['longtitle'], 'amptitle' => $title['pagetitle'], 'ampmenutitle' => $menutitle['menutitle'], 'ampdescription' => $description['description'], 'ampintrotext' => $introtext['introtext'],'ampimage' => $mainimage, 'datePublished' => $datePublished, 'dateModified' => $dateModified, 'author' => $author);
 $output =  $output . $modx->parseChunk($tpl, $values, '[+', '+]');
 
 return $output;
