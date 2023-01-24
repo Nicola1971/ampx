@@ -93,7 +93,7 @@ class AMP_Iframe_Sanitizer extends AMP_Base_Sanitizer {
 
 				case 'width':
 					if ( $value === '100%' ) {
-						continue;
+						continue 2;
 					}
 					$out[ $name ] = $value;
 					break;
