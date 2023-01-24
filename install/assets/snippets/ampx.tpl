@@ -1,16 +1,15 @@
 /**
  * ampx
  *
- * Accelerated Mobile Pages for Evo - Beta 1.0.7
+ * Accelerated Mobile Pages for Evo - Beta 1.0.8
  *
-* @version  Beta 1.0.7
+* @version  Beta 1.0.8
  * @author  Nicola Lambathakis http://www.tattoocms.it/
  * @category	snippet
  * @internal	@modx_category ampx
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  */
 
-<?php
 /* add to the head tag of your template (where 57 is the resource containing ampx snippet call)
  * <link rel="amphtml" href="[(site_url)][~57~]?ampid=[*id*]" />
  *  you can pass tpl parameter via URL:
@@ -63,10 +62,10 @@ $cleancontent = stripAttributes($strip_tagscontent,$attribs);
 //get datePublished from publishedon
 //setlocale ( LC_ALL , "it_IT" ); 
 $publishedon = $modx->getPageInfo($id,1,'publishedon'); 
-$datePublished = date(r,$publishedon['publishedon']);
+$datePublished = date('r',$publishedon['publishedon']);
 //get dateModified from editedon
 $editedon = $modx->getPageInfo($id,1,'editedon'); 
-$dateModified = date(r,$editedon['editedon']);
+$dateModified = date('r',$editedon['editedon']);
 
 //get canonical url from page
 $canonicalurl = $modx->makeUrl($id, '', '', 'full');	
