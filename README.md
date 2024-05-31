@@ -1,3 +1,5 @@
+# [THIS PROJECT IS DEPRECATED] 
+
 # ampx Beta 1.0.7
 Accelerated Mobile Pages (AMP) for  MODX Evolution
 
